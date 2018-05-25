@@ -22,7 +22,7 @@ class App extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({key: ENV['API_KEY'], term: term}, (videos) => {
+        YTSearch({key: process.env.API_KEY, term: term}, (videos) => {
             this.setState({
                 videos: videos,
                 //first video in the list is set to the videoSelected
