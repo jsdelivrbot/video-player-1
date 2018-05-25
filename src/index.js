@@ -8,9 +8,7 @@ import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoInfo from './components/video-infomation';
 //import api key 
-import{API_KEY, HOST, PORT} from './key';
-
-const URL = `http:${HOST}:${PORT}/user?${API_KEY}`;
+import{API_KEY} from './key';
 
 //Parent component
 class App extends Component {
