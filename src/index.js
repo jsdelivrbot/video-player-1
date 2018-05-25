@@ -8,6 +8,8 @@ import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoInfo from './components/video-infomation';
 
+const API_KEY = process.env.API_KEY;
+
 //Parent component
 class App extends Component {
     constructor(props) {
@@ -22,7 +24,7 @@ class App extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({key: process.env.API_KEY, term: term}, (videos) => {
+        YTSearch({key: API_KEY, term: term}, (videos) => {
             this.setState({
                 videos: videos,
                 //first video in the list is set to the videoSelected
