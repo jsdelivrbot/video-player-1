@@ -7,8 +7,6 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoInfo from './components/video-infomation';
-//import api key 
-import{API_KEY} from './key';
 
 //Parent component
 class App extends Component {
@@ -24,7 +22,7 @@ class App extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({key: API_KEY, term: term}, (videos) => {
+        YTSearch({key: ENV[API_KEY], term: term}, (videos) => {
             this.setState({
                 videos: videos,
                 //first video in the list is set to the videoSelected
