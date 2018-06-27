@@ -8,7 +8,8 @@ import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoInfo from './components/video-infomation';
 
-const API_KEY = process.env.API_KEY;
+// const API_KEY = process.env.API_KEY;
+import{API_KEY} from './key';
 
 //Parent component
 class App extends Component {
